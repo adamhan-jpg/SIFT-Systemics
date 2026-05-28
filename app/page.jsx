@@ -39,7 +39,7 @@ const stats = [
 ];
 
 const bullets = [
-  "Find high-consequence patterns buried in low-severity incident data",
+  "Find high-consequence patterns buried in anonymized low-severity incident data",
   "Prioritize safety reviews by fatal-risk proximity, not just frequency",
   "Create an owner-ready evidence trail for contractor and operational risk governance",
   "Start with a limited, anonymized dataset before any larger engagement"
@@ -74,7 +74,7 @@ export default function SiftSystemicsLandingPage() {
           href="#pilot"
           className="bg-black px-5 py-3 text-xs font-black uppercase tracking-wide text-white md:px-7 md:py-4"
         >
-          Discuss a pilot
+          SIFT HAPPENS
         </a>
       </header>
 
@@ -105,7 +105,7 @@ export default function SiftSystemicsLandingPage() {
                 href="#pilot"
                 className="inline-flex items-center justify-center gap-3 bg-black px-7 py-4 text-sm font-black uppercase tracking-wide text-white"
               >
-                Explore a pilot
+                Ready to learn more?
                 <ArrowRight className="h-5 w-5" />
               </a>
 
