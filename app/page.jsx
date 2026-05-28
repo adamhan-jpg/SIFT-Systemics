@@ -1,7 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { ArrowRight, Check, Mail, ShieldCheck } from "lucide-react";
+import {
+  ArrowRight,
+  Check,
+  Mail,
+  ShieldCheck
+} from "lucide-react";
 
 function SiftLogo({ size = 72 }) {
   return (
@@ -33,22 +38,12 @@ const stats = [
   }
 ];
 
-
 const bullets = [
   "Find high-consequence patterns buried in low-severity incident data",
   "Prioritize safety reviews by fatal-risk proximity, not just frequency",
   "Create an owner-ready evidence trail for contractor and operational risk governance",
   "Start with a limited, anonymized dataset before any larger engagement"
 ];
-
-<a
-  href="/industry-report.html"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center justify-center gap-3 border-2 border-black px-7 py-4 text-sm font-black uppercase tracking-wide"
->
-  View Industry Report
-</a>
 
 export default function SiftSystemicsLandingPage() {
   const [formData, setFormData] = useState({
@@ -93,13 +88,16 @@ export default function SiftSystemicsLandingPage() {
             <h1 className="max-w-4xl text-6xl font-black uppercase leading-[0.92] tracking-[-0.06em] md:text-8xl">
               Hidden signatures.
               <br />
-              <span className="text-black/60">Safer systems.</span>
+              <span className="text-black/60">
+                Safer systems.
+              </span>
             </h1>
 
             <p className="mt-7 max-w-2xl text-xl font-semibold leading-9 text-black/75">
-              Sift Systemics helps safety leaders find fatal-risk pathways hidden
-              inside ordinary low-severity incidents, near misses, and routine
-              observations.
+              Sift Systemics helps safety leaders find
+              fatal-risk pathways hidden inside ordinary
+              low-severity incidents, near misses, and
+              routine observations.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -107,26 +105,26 @@ export default function SiftSystemicsLandingPage() {
                 href="#pilot"
                 className="inline-flex items-center justify-center gap-3 bg-black px-7 py-4 text-sm font-black uppercase tracking-wide text-white"
               >
-                Explore a pilot <ArrowRight className="h-5 w-5" />
+                Explore a pilot
+                <ArrowRight className="h-5 w-5" />
               </a>
 
               <a
                 href="#pilot"
                 className="inline-flex items-center justify-center gap-3 border-2 border-black px-7 py-4 text-sm font-black uppercase tracking-wide"
               >
-                Discuss a pilot <Mail className="h-5 w-5" />
+                Discuss a pilot
+                <Mail className="h-5 w-5" />
               </a>
 
-                <a
-                  href="/industry-report.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 border-2 border-black px-7 py-4 text-sm font-black uppercase tracking-wide"
-                >
-                  View Industry Report
-                </a>
-              </div>
-              
+              <a
+                href="/industry-report.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 border-2 border-black px-7 py-4 text-sm font-black uppercase tracking-wide"
+              >
+                View Industry Report
+              </a>
             </div>
           </div>
 
@@ -161,7 +159,9 @@ export default function SiftSystemicsLandingPage() {
             </p>
 
             <h2 className="mt-4 text-4xl font-black uppercase leading-tight tracking-[-0.05em] md:text-6xl">
-              Severity is the outcome. Physics is the warning.
+              Severity is the outcome.
+              <br />
+              Physics is the warning.
             </h2>
           </div>
 
@@ -173,7 +173,9 @@ export default function SiftSystemicsLandingPage() {
               >
                 <Check className="mt-1 h-6 w-6 shrink-0 stroke-[3]" />
 
-                <p className="text-lg font-bold leading-8">{item}</p>
+                <p className="text-lg font-bold leading-8">
+                  {item}
+                </p>
               </div>
             ))}
           </div>
@@ -191,13 +193,15 @@ export default function SiftSystemicsLandingPage() {
               </div>
 
               <h2 className="text-4xl font-black uppercase leading-tight tracking-[-0.05em] md:text-6xl">
-                Interested in finding what your incident data is already telling
-                you?
+                Interested in finding what your incident
+                data is already telling you?
               </h2>
 
               <p className="mt-6 max-w-xl text-lg font-medium leading-8 text-white/75">
-                Share a few details and Sift Systemics can discuss a limited
-                pilot using anonymized incident, near-miss, or observation data.
+                Share a few details and Sift Systemics
+                can discuss a limited pilot using
+                anonymized incident, near-miss, or
+                observation data.
               </p>
             </div>
 
@@ -206,6 +210,12 @@ export default function SiftSystemicsLandingPage() {
               method="POST"
               className="grid gap-4 bg-white p-6 text-black md:p-8"
             >
+              <input
+                type="hidden"
+                name="_next"
+                value="https://siftsystemics.com/thank-you"
+              />
+
               <div className="grid gap-4 md:grid-cols-2">
                 <label className="grid gap-2 text-sm font-black uppercase tracking-wide">
                   Name
@@ -255,16 +265,31 @@ export default function SiftSystemicsLandingPage() {
                   value={formData.interest}
                   onChange={handleChange}
                 >
-                  <option>Incident / near-miss review</option>
-                  <option>Contractor safety oversight</option>
-                  <option>Renewables or construction pilot</option>
-                  <option>Owner risk governance</option>
-                  <option>Insurance / underwriting discussion</option>
+                  <option>
+                    Incident / near-miss review
+                  </option>
+
+                  <option>
+                    Contractor safety oversight
+                  </option>
+
+                  <option>
+                    Renewables or construction pilot
+                  </option>
+
+                  <option>
+                    Owner risk governance
+                  </option>
+
+                  <option>
+                    Insurance / underwriting discussion
+                  </option>
                 </select>
               </label>
 
               <label className="grid gap-2 text-sm font-black uppercase tracking-wide">
-                What data or risk question would you like to explore?
+                What data or risk question would you like
+                to explore?
 
                 <textarea
                   className="min-h-32 border-2 border-black px-4 py-3 text-base font-medium normal-case"
@@ -278,11 +303,13 @@ export default function SiftSystemicsLandingPage() {
                 className="mt-2 inline-flex items-center justify-center gap-3 bg-black px-7 py-4 text-sm font-black uppercase tracking-wide text-white"
                 type="submit"
               >
-                Send pilot interest <ArrowRight className="h-5 w-5" />
+                Send pilot interest
+                <ArrowRight className="h-5 w-5" />
               </button>
 
               <p className="text-sm font-medium leading-6 text-black/55">
-                Form submissions are securely sent through Formspree directly to
+                Form submissions are securely sent
+                through Formspree directly to
                 SIFT Systemics.
               </p>
             </form>
