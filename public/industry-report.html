@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Industry Fatality Exposure Report 2015–2025 — Renewable Energy &amp; Construction</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0f0e0c;
+    --ink-mid: #3a3830;
+    --ink-muted: #7a7870;
+    --cream: #f6f3ee;
+    --cream-mid: #ece8e0;
+    --cream-dark: #ddd9cf;
+    --red: #b82c1e;
+    --red-light: #f7e8e6;
+    --amber: #c87a14;
+    --amber-light: #fdf3e3;
+    --teal: #1a6b5a;
+    --teal-light: #e2f0ed;
+    --rule: #c8c4bb;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  /* ── MASTHEAD ── */
+  .masthead {
+    border-bottom: 3px solid var(--ink);
+    padding: 48px 0 28px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 24px;
+  }
+  .masthead-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 10px;
+  }
+  .masthead-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(48px, 8vw, 88px);
+    line-height: 0.92;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+  }
+  .masthead-title em {
+    color: var(--red);
+    font-style: normal;
+  }
+  .masthead-meta {
+    text-align: right;
+    font-size: 12px;
+    color: var(--ink-muted);
+    line-height: 1.8;
+  }
+  .masthead-meta strong {
+    display: block;
+    font-size: 13px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* ── INTRO BANNER ── */
+  .intro-banner {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 32px 36px;
+    margin: 36px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+  }
+  .banner-stat {
+    padding: 0 28px;
+    border-right: 1px solid rgba(255,255,255,0.15);
+  }
+  .banner-stat:first-child { padding-left: 0; }
+  .banner-stat:last-child { border-right: none; }
+  .banner-stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    line-height: 1;
+    color: #fff;
+    letter-spacing: 0.02em;
+  }
+  .banner-stat-num span { color: var(--amber); }
+  .banner-stat-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+
+  /* ── SECTION LABELS ── */
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border-top: 1px solid var(--rule);
+    padding-top: 18px;
+    margin-bottom: 16px;
+    margin-top: 56px;
+  }
+
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: var(--ink);
+  }
+  h3 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  p { margin-bottom: 14px; color: var(--ink-mid); }
+
+  /* ── RATING BARS ── */
+  .ratings-section {
+    margin-top: 48px;
+  }
+  .rating-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .rating-row {
+    display: grid;
+    grid-template-columns: 140px 1fr 48px;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 0.5px solid var(--cream-dark);
+  }
+  .rating-row:last-child { border-bottom: none; }
+  .rating-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .rating-bar-track {
+    background: var(--cream-mid);
+    height: 10px;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+  .rating-bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    background: var(--ink);
+    transition: width 1.2s ease;
+  }
+  .rating-bar-fill.high { background: var(--red); }
+  .rating-bar-fill.mid  { background: var(--amber); }
+  .rating-bar-fill.avg  { background: var(--ink-muted); }
+  .rating-score {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: var(--ink);
+    text-align: right;
+  }
+  .rating-score.high { color: var(--red); }
+  .rating-avg-row {
+    display: grid;
+    grid-template-columns: 140px 1fr 48px;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+    background: var(--cream-mid);
+    margin: 0 -8px;
+    padding: 12px 8px;
+  }
+
+  /* ── MECHANISM GRID ── */
+  .mechanism-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 24px;
+  }
+  .mech-card {
+    background: #fff;
+    border: 0.5px solid var(--cream-dark);
+    padding: 20px 18px;
+  }
+  .mech-card:nth-child(1) { background: var(--ink); color: var(--cream); }
+  .mech-card:nth-child(1) .mech-title { color: #fff; }
+  .mech-card:nth-child(1) .mech-desc { color: rgba(255,255,255,0.55); }
+  .mech-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    line-height: 1;
+    color: var(--cream-dark);
+    display: block;
+    margin-bottom: 8px;
+  }
+  .mech-card:nth-child(1) .mech-number { color: rgba(255,255,255,0.2); }
+  .mech-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 6px;
+    letter-spacing: 0.02em;
+  }
+  .mech-desc {
+    font-size: 12px;
+    color: var(--ink-muted);
+    line-height: 1.5;
+  }
+
+  /* ── PULL QUOTE ── */
+  .pull-quote {
+    border-left: 4px solid var(--red);
+    padding: 20px 28px;
+    margin: 40px 0;
+    background: var(--red-light);
+  }
+  .pull-quote p {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* ── KEY FINDINGS ── */
+  .findings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 24px;
+  }
+  .finding-card {
+    border-top: 3px solid var(--ink);
+    padding-top: 16px;
+  }
+  .finding-card.red { border-top-color: var(--red); }
+  .finding-card.amber { border-top-color: var(--amber); }
+  .finding-card.teal { border-top-color: var(--teal); }
+  .finding-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 56px;
+    line-height: 1;
+    color: var(--cream-dark);
+    display: block;
+  }
+  .finding-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .finding-body {
+    font-size: 13px;
+    color: var(--ink-mid);
+    line-height: 1.6;
+  }
+
+  /* ── WEAKNESS TABLE ── */
+  .weakness-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .weakness-table th {
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--ink);
+    font-weight: 400;
+  }
+  .weakness-table td {
+    padding: 12px 0;
+    border-bottom: 0.5px solid var(--cream-dark);
+    vertical-align: top;
+    color: var(--ink-mid);
+  }
+  .weakness-table td:first-child {
+    font-weight: 500;
+    color: var(--ink);
+    width: 55%;
+    padding-right: 20px;
+  }
+  .severity-badge {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 2px;
+    font-weight: 500;
+  }
+  .sev-critical { background: var(--red-light); color: var(--red); }
+  .sev-common { background: var(--amber-light); color: var(--amber); }
+  .sev-recurring { background: var(--teal-light); color: var(--teal); }
+
+  /* ── RECOMMENDATIONS ── */
+  .recs-list {
+    counter-reset: recs;
+    list-style: none;
+    margin-top: 24px;
+  }
+  .recs-list li {
+    counter-increment: recs;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 0.5px solid var(--cream-dark);
+    align-items: start;
+  }
+  .recs-list li::before {
+    content: counter(recs, decimal-leading-zero);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    color: var(--cream-dark);
+    line-height: 1;
+    margin-top: 2px;
+  }
+  .rec-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .rec-body {
+    font-size: 13px;
+    color: var(--ink-mid);
+    line-height: 1.6;
+  }
+  .rec-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .rec-tag {
+    font-size: 11px;
+    background: var(--cream-mid);
+    color: var(--ink-muted);
+    padding: 2px 8px;
+    border-radius: 2px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── OUTLOOK ── */
+  .outlook-box {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 40px 44px;
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .outlook-box h2 {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 14px;
+  }
+  .outlook-box p {
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .outlook-highlight {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    font-style: italic;
+    color: rgba(255,255,255,0.85);
+    border-left: 3px solid var(--amber);
+    padding-left: 16px;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+  .outlook-drivers {
+    list-style: none;
+  }
+  .outlook-drivers li {
+    padding: 10px 0;
+    border-bottom: 0.5px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .driver-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--amber);
+    flex-shrink: 0;
+  }
+
+  /* ── FOOTER ── */
+  .report-footer {
+    border-top: 1px solid var(--rule);
+    margin-top: 56px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .report-footer p {
+    font-size: 11px;
+    color: var(--ink-muted);
+    margin: 0;
+  }
+  .confidential-badge {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: var(--ink);
+    color: var(--cream);
+    padding: 4px 10px;
+  }
+
+  @media (max-width: 680px) {
+    .masthead { grid-template-columns: 1fr; }
+    .masthead-meta { text-align: left; }
+    .intro-banner { grid-template-columns: 1fr; }
+    .banner-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 16px 0; }
+    .mechanism-grid { grid-template-columns: 1fr 1fr; }
+    .findings-grid { grid-template-columns: 1fr; }
+    .outlook-box { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div>
+    <div class="masthead-eyebrow">2015–2025 Public OSHA Severe Incident Records &nbsp;&nbsp;<span class="confidential-badge">Confidential</span></div>
+    <div class="masthead-title">Industry<br /><em>Fatality</em><br />Exposure<br />Report</div>
+  </div>
+  <div class="masthead-meta">
+    <strong>Sectors Covered</strong>
+    Renewable Energy<br />
+    &nbsp;&nbsp;incl. Heavy Civil<br />
+    &nbsp;&nbsp;Utility &amp;<br />
+    &nbsp;&nbsp;Industrial Construction
+    <br /><br />
+    <strong>Data Period</strong>
+    2015 – 2025
+  </div>
+</header>
+
+<!-- INTRO BANNER -->
+<div class="intro-banner">
+  <div class="banner-stat">
+    <div class="banner-stat-num"><span>83</span>%</div>
+    <div class="banner-stat-label">of Severe Events Had Survivable Outcomes — Yet Extreme Fatal Physics</div>
+  </div>
+  <div class="banner-stat">
+    <div class="banner-stat-num"><span>62</span>.7%</div>
+    <div class="banner-stat-label">of Fatal Falls from 2011–2022 Occurred Among Contracted Workers</div>
+  </div>
+  <div class="banner-stat">
+    <div class="banner-stat-num"><span>62</span>%</div>
+    <div class="banner-stat-label">of Construction Fatal Injuries Involved Specialty Trade Contractors (2023)</div>
+  </div>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="section-label">Executive Summary</div>
+<h2>High-energy fatal pathways persist across every sector — driven by failed controls, not bad luck.</h2>
+<p>Analysis of contractor incident narratives identified a persistent concentration of fatal exposure pathways across renewable energy and its affiliated sectors — heavy civil, utility, and industrial construction. Though many events resulted in nonfatal injuries, the majority involved narrow survivability margins, failed critical controls, and high kinetic or electrical energy transfer.</p>
+<p>The data reveals a systemic blind spot: <strong>the industry continues to under-recognize low-injury incidents with extremely high fatal potential</strong> — treating near-fatalities as routine recordables rather than precursor events demanding executive-level investigation.</p>
+
+<div class="pull-quote">
+  <p>"Several incidents with survivable outcomes had extremely high fatal physics. A 70-foot tower fall should never be classified as a mere recordable."</p>
+</div>
+
+<!-- CONTRACTOR RATINGS -->
+<div class="section-label">Contractor Fatality Exposure Ratings</div>
+<h2>How do surveyed contractors compare?</h2>
+<p>Ratings reflect the severity and frequency of fatal-precursor event patterns identified in incident narratives across five major contractors, scored 1–10.</p>
+
+<div class="ratings-section">
+  <div class="rating-row">
+    <div class="rating-name">Blattner Energy</div>
+    <div class="rating-bar-track">
+      <div class="rating-bar-fill high" style="width:91%"></div>
+    </div>
+    <div class="rating-score high">9.1</div>
+  </div>
+  <div class="rating-row">
+    <div class="rating-name">Primoris</div>
+    <div class="rating-bar-track">
+      <div class="rating-bar-fill high" style="width:88%"></div>
+    </div>
+    <div class="rating-score high">8.8</div>
+  </div>
+  <div class="rating-row">
+    <div class="rating-name">Kiewit</div>
+    <div class="rating-bar-track">
+      <div class="rating-bar-fill high" style="width:86%"></div>
+    </div>
+    <div class="rating-score high">8.6</div>
+  </div>
+  <div class="rating-row">
+    <div class="rating-name">Solv Energy</div>
+    <div class="rating-bar-track">
+      <div class="rating-bar-fill mid" style="width:80%"></div>
+    </div>
+    <div class="rating-score mid">8.0</div>
+  </div>
+  <div class="rating-row">
+    <div class="rating-name">Swinerton</div>
+    <div class="rating-bar-track">
+      <div class="rating-bar-fill mid" style="width:72%"></div>
+    </div>
+    <div class="rating-score mid">7.2</div>
+  </div>
+  <div class="rating-avg-row">
+    <div class="rating-name" style="font-size:12px; color: var(--ink-muted); letter-spacing:0.06em; text-transform:uppercase;">Industry Avg</div>
+    <div class="rating-bar-track">
+      <div class="rating-bar-fill avg" style="width:79%"></div>
+    </div>
+    <div class="rating-score" style="color: var(--ink-muted);">7.9</div>
+  </div>
+</div>
+
+<!-- FATAL MECHANISMS -->
+<div class="section-label">Fatal Mechanisms Identified</div>
+<h2>Seven pathways account for the vast majority of high-severity exposures.</h2>
+
+<div class="mechanism-grid">
+  <div class="mech-card">
+    <span class="mech-number">01</span>
+    <div class="mech-title">Electrocution</div>
+    <div class="mech-desc">Immediate lethality; minimal survivability margin. Downed line contact and energized conductor exposure.</div>
+  </div>
+  <div class="mech-card">
+    <span class="mech-number">02</span>
+    <div class="mech-title">Falls 20–70 ft</div>
+    <div class="mech-desc">High gravitational energy transfer. Tower hatches, roof and skylight openings, elevated framing.</div>
+  </div>
+  <div class="mech-card">
+    <span class="mech-number">03</span>
+    <div class="mech-title">Equipment Rollover</div>
+    <div class="mech-desc">Crush and ejection physics. Forklifts, cranes, telehandlers on unstable terrain.</div>
+  </div>
+  <div class="mech-card">
+    <span class="mech-number">04</span>
+    <div class="mech-title">Suspended Loads</div>
+    <div class="mech-desc">Dynamic impact and crush energy. Crane mats, structural bolts, wall panels in transit.</div>
+  </div>
+  <div class="mech-card">
+    <span class="mech-number">05</span>
+    <div class="mech-title">Vehicle Intrusion</div>
+    <div class="mech-desc">High-speed struck-by events at roadside utility and tow operations.</div>
+  </div>
+  <div class="mech-card">
+    <span class="mech-number">06</span>
+    <div class="mech-title">Machinery Entrapment</div>
+    <div class="mech-desc">Stored-energy release in mixers, balers, and compactors during maintenance.</div>
+  </div>
+  <div class="mech-card" style="grid-column: span 3;">
+    <span class="mech-number">07</span>
+    <div class="mech-title">Pile-Driver Interaction</div>
+    <div class="mech-desc">Blind-zone struck-by exposure during solar field equipment movement. Pedestrian overlap with restricted sightlines.</div>
+  </div>
+</div>
+
+<!-- KEY FINDINGS -->
+<div class="section-label">Key Industry Findings</div>
+<h2>Four findings demand immediate leadership attention.</h2>
+
+<div class="findings-grid">
+  <div class="finding-card red">
+    <span class="finding-num">01</span>
+    <div class="finding-title">Mobile Equipment Is the Dominant Fatal Driver</div>
+    <div class="finding-body">Forklifts, telehandlers, cranes, pile drivers, and UTVs repeatedly appeared in severe-exposure events. Common precursors: blind spots, pedestrian overlap, terrain instability, congestion, and absent exclusion zones.</div>
+  </div>
+  <div class="finding-card amber">
+    <span class="finding-num">02</span>
+    <div class="finding-title">Falls Consistently Produce Extreme Fatal Potential</div>
+    <div class="finding-body">Incidents involved towers, skylights, elevated framing, and roof openings — many lacking guardrails, enforced tie-off, engineered covers, or any fall-prevention planning.</div>
+  </div>
+  <div class="finding-card teal">
+    <span class="finding-num">03</span>
+    <div class="finding-title">Electrical Exposure Has Zero-Error Tolerance</div>
+    <div class="finding-body">Every electrical incident demonstrated immediate fatal pathways and severe survivability compression. Common failures: MAD violations, unverified de-energization, inadequate utility coordination.</div>
+  </div>
+  <div class="finding-card">
+    <span class="finding-num">04</span>
+    <div class="finding-title">"Minor Injury" Labels Mask Extreme Fatal Physics</div>
+    <div class="finding-body">A 70-foot tower fall, crane overturn, or roadway intrusion with a survivable outcome is not a recordable — it is a near-fatal event. Current classification practices hide the true risk landscape from leadership.</div>
+  </div>
+</div>
+
+<!-- CRITICAL WEAKNESSES -->
+<div class="section-label">Critical Industry Weaknesses</div>
+<h2>Systemic gaps observed across all surveyed contractors.</h2>
+
+<table class="weakness-table">
+  <thead>
+    <tr>
+      <th>Weakness</th>
+      <th>Observed Pattern</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Weak exclusion-zone enforcement</td>
+      <td><span class="severity-badge sev-critical">Very Common</span></td>
+    </tr>
+    <tr>
+      <td>Poor pedestrian–equipment separation</td>
+      <td><span class="severity-badge sev-critical">Common</span></td>
+    </tr>
+    <tr>
+      <td>Inadequate dropped-object prevention</td>
+      <td><span class="severity-badge sev-critical">Common</span></td>
+    </tr>
+    <tr>
+      <td>Incomplete lockout / energy isolation</td>
+      <td><span class="severity-badge sev-common">Recurring</span></td>
+    </tr>
+    <tr>
+      <td>Limited fatal precursor analytics</td>
+      <td><span class="severity-badge sev-critical">Widespread</span></td>
+    </tr>
+    <tr>
+      <td>Overreliance on OSHA recordables as a safety proxy</td>
+      <td><span class="severity-badge sev-critical">Systemic</span></td>
+    </tr>
+    <tr>
+      <td>Inconsistent stop-work authority culture</td>
+      <td><span class="severity-badge sev-common">Frequent</span></td>
+    </tr>
+    <tr>
+      <td>Weak temporary-work planning</td>
+      <td><span class="severity-badge sev-recurring">Common</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- RECOMMENDATIONS -->
+<div class="section-label">Strategic Recommendations</div>
+<h2>Five immediate priorities for industry safety leadership.</h2>
+
+<ol class="recs-list">
+  <li>
+    <div>
+      <div class="rec-title">Shift from Injury Metrics to Fatal Exposure Metrics</div>
+      <div class="rec-body">Prioritize tracking FPI 1–2 events — the highest-risk precursor category — alongside dropped objects, near-rollovers, electrical near misses, intrusion events, and exclusion-zone breaches. OSHA recordable rates are an insufficient proxy for fatal risk.</div>
+      <div class="rec-tags">
+        <span class="rec-tag">Analytics</span>
+        <span class="rec-tag">Executive Reporting</span>
+        <span class="rec-tag">Leading Indicators</span>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div>
+      <div class="rec-title">Engineer Worker–Equipment Separation</div>
+      <div class="rec-body">Implement geofenced exclusion zones, dedicated pedestrian corridors, smart proximity detection, anti-collision systems, and mandatory backing restrictions in congested work areas.</div>
+      <div class="rec-tags">
+        <span class="rec-tag">Engineering Controls</span>
+        <span class="rec-tag">Mobile Equipment</span>
+        <span class="rec-tag">Technology</span>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div>
+      <div class="rec-title">Eliminate Work Beneath Suspended Loads</div>
+      <div class="rec-body">Require suspended-load exclusion zones, engineered lift path planning, comprehensive dropped-object prevention programs, and secondary securement on all elevated materials.</div>
+      <div class="rec-tags">
+        <span class="rec-tag">Lifting Operations</span>
+        <span class="rec-tag">Dropped Object Prevention</span>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div>
+      <div class="rec-title">Improve Electrical Control Discipline</div>
+      <div class="rec-body">Mandate visible grounds, test-before-touch protocols, verified minimum approach distances, proactive utility coordination, and dedicated safety observers on all energized-system work.</div>
+      <div class="rec-tags">
+        <span class="rec-tag">Electrical Safety</span>
+        <span class="rec-tag">Lockout / Tagout</span>
+        <span class="rec-tag">Utility Coordination</span>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div>
+      <div class="rec-title">Expand High-Energy Near-Miss Investigation</div>
+      <div class="rec-body">Every rollover, dropped object, electrical flash, uncontrolled equipment movement, and collapse precursor must trigger executive-level review — not just a field-level safety report.</div>
+      <div class="rec-tags">
+        <span class="rec-tag">Incident Investigation</span>
+        <span class="rec-tag">Executive Review</span>
+        <span class="rec-tag">Near-Miss Culture</span>
+      </div>
+    </div>
+  </li>
+</ol>
+
+<!-- OUTLOOK -->
+<div class="outlook-box">
+  <div>
+    <h2>Industry Outlook</h2>
+    <p>The next major safety improvement will not come from reducing slips, strains, or minor recordables. It will come from identifying and interrupting fatal energy transfer before catastrophic alignment occurs.</p>
+    <div class="outlook-highlight">
+      "The strongest prevention opportunities are hidden inside routine deviations, 'almost' events, and normalized exposure to unstable energy states."
+    </div>
+  </div>
+  <div>
+    <h3 style="color: rgba(255,255,255,0.4); font-size: 11px; letter-spacing: 0.16em; margin-bottom: 12px;">Primary Fatal Exposure Drivers</h3>
+    <ul class="outlook-drivers">
+      <li><span class="driver-dot"></span>Mobile equipment interaction</li>
+      <li><span class="driver-dot"></span>Falls from elevation</li>
+      <li><span class="driver-dot"></span>Electrical contact</li>
+      <li><span class="driver-dot"></span>Suspended and falling loads</li>
+      <li><span class="driver-dot"></span>Roadway intrusion exposure</li>
+      <li><span class="driver-dot"></span>Stored-energy release</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FOOTNOTES -->
+<div style="margin-top: 48px; padding-top: 20px; border-top: 0.5px solid var(--rule);">
+  <p style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 12px;">Sources &amp; Notes</p>
+  <ol style="list-style: decimal; padding-left: 18px; margin: 0;">
+    <li style="font-size: 12px; color: var(--ink-muted); line-height: 1.7; margin-bottom: 6px;">83% figure derived from internal FACE-style incident narrative review, 2015–2025 sample. Reflects incidents with survivable recorded outcomes that exhibited extreme fatal-energy physics upon analysis. Not an official government or OSHA statistic.</li>
+    <li style="font-size: 12px; color: var(--ink-muted); line-height: 1.7; margin-bottom: 6px;">CPWR Data Bulletin, <em>Fatal and Nonfatal Falls in the U.S. Construction Industry, 2011–2022</em>. Of 2,593 fatal falls recorded, 62.7% involved contracted workers. <a href="https://www.cpwr.com" style="color: var(--ink-muted);">cpwr.com</a></li>
+    <li style="font-size: 12px; color: var(--ink-muted); line-height: 1.7; margin-bottom: 6px;">CPWR Data Bulletin, <em>Focus Four Hazards in Construction, 2011–2023</em>. Specialty Trade Contractors accounted for 62% of fatal injuries in construction with reported subsector in 2023. <a href="https://www.cpwr.com" style="color: var(--ink-muted);">cpwr.com</a></li>
+    <li style="font-size: 12px; color: var(--ink-muted); line-height: 1.7;">Contractor Fatality Exposure Ratings and FPI scoring derived from internal FACE-style incident review, 2015–2025 sample. Ratings and FPI scores are not official government or OSHA classifications.</li>
+  </ol>
+</div>
+
+<!-- FOOTER -->
+<div class="report-footer">
+  <p>Industry Fatality Exposure Report &nbsp;·&nbsp; 2015–2025 Public OSHA Severe Incident Records &nbsp;·&nbsp; Renewable Energy incl. Heavy Civil, Utility &amp; Industrial Construction</p>
+  <span class="confidential-badge">Confidential</span>
+</div>
+<div style="padding: 10px 0 0; text-align: right;">
+  <p style="font-size: 11px; color: var(--ink-muted); margin: 0;">&copy; 2025 SIFT Systemics. All rights reserved.</p>
+</div>
+<div style="display: flex; justify-content: flex-end; align-items: center; gap: 20px; padding: 16px 0 0; color: var(--ink);">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 115" width="36" height="42" style="opacity:0.3;">
+  <!-- shield outline -->
+  <path d="M5,5 H95 V75 Q95,105 50,112 Q5,105 5,75 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+  <!-- pine tree -->
+  <polygon points="30,65 22,65 30,52 24,52 32,38 26,38 36,22 36,65" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  <!-- tree trunk -->
+  <rect x="33" y="62" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <!-- radiating lines from top right -->
+  <line x1="38" y1="20" x2="90" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="38" y1="28" x2="90" y2="30" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="38" y1="36" x2="88" y2="44" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="38" y1="44" x2="82" y2="57" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- sailboat -->
+  <line x1="68" y1="62" x2="68" y2="38" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  <polygon points="68,40 68,58 82,58" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+  <line x1="60" y1="62" x2="82" y2="62" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <!-- waves -->
+  <path d="M10,70 Q22,66 34,70 Q46,74 58,70 Q70,66 82,70 Q88,72 92,70" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M12,78 Q24,74 36,78 Q48,82 60,78 Q72,74 88,78" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <!-- 1867 text -->
+  <text x="50" y="100" font-family="Georgia, serif" font-size="13" text-anchor="middle" fill="currentColor" letter-spacing="1">1867</text>
+</svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="40" height="40" style="opacity:0.3;">
+  <!-- outer circle with gap at top (12 o'clock) — dashoffset shifts gap to top -->
+  <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="6"
+    stroke-dasharray="242 34" stroke-dashoffset="59" stroke-linecap="round"/>
+  <!-- motion lines above I (I is ~x=50 in SIFT) -->
+  <line x1="47" y1="8" x2="46" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="50" y1="7" x2="50" y2="15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="53" y1="8" x2="54" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- falling block above I, slightly rotated -->
+  <rect x="45" y="17" width="10" height="10" rx="1" fill="currentColor" transform="rotate(-15 50 22)"/>
+  <!-- SIFT text -->
+  <text x="50" y="72" font-family="Arial Black, sans-serif" font-weight="900" font-size="26"
+    text-anchor="middle" fill="currentColor" letter-spacing="-1">SIFT</text>
+</svg>
+</div>
+
+
+</body>
+</html>
