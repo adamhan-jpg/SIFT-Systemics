@@ -3,13 +3,9 @@ import { ArrowRight, Check, Mail, ShieldCheck } from "lucide-react";
 
 function SiftLogo({ size = 72 }) {
   return (
-    <img
-      src="/sift-logo.jpg"
-      alt="SIFT Systemics logo"
-      width={size}
-      height={size}
-      style={{ objectFit: "contain" }}
-    />
+    <div style={{ fontWeight: 900, fontSize: size / 3 }}>
+      SIFT
+    </div>
   );
 }
 
