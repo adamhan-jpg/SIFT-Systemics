@@ -33,6 +33,14 @@ const stats = [
   }
 ];
 
+
+const bullets = [
+  "Find high-consequence patterns buried in low-severity incident data",
+  "Prioritize safety reviews by fatal-risk proximity, not just frequency",
+  "Create an owner-ready evidence trail for contractor and operational risk governance",
+  "Start with a limited, anonymized dataset before any larger engagement"
+];
+
 <a
   href="/industry-report.html"
   target="_blank"
@@ -41,12 +49,6 @@ const stats = [
 >
   View Industry Report
 </a>
-const bullets = [
-  "Find high-consequence patterns buried in low-severity incident data",
-  "Prioritize safety reviews by fatal-risk proximity, not just frequency",
-  "Create an owner-ready evidence trail for contractor and operational risk governance",
-  "Start with a limited, anonymized dataset before any larger engagement"
-];
 
 export default function SiftSystemicsLandingPage() {
   const [formData, setFormData] = useState({
