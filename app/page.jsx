@@ -82,7 +82,7 @@ export default function SiftSystemicsLandingPage() {
         <section className="mx-auto grid max-w-7xl items-center gap-12 px-6 pb-16 pt-6 md:grid-cols-[1fr_0.9fr] md:px-8 md:pb-24">
           <div>
             <p className="mb-5 text-sm font-black uppercase tracking-[0.28em] text-black/50">
-              Fatal physics intelligence
+              Fatal physics intelligence / your incident data
             </p>
 
             <h1 className="max-w-4xl text-6xl font-black uppercase leading-[0.92] tracking-[-0.06em] md:text-8xl">
