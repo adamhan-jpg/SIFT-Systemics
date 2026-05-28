@@ -161,7 +161,7 @@ export default function SiftSystemicsLandingPage() {
             <h2 className="mt-4 text-4xl font-black uppercase leading-tight tracking-[-0.05em] md:text-6xl">
               Prevention is in the data.
               <br />
-              Do more than count incidents.
+              Regardless of the outcome.
             </h2>
           </div>
 
