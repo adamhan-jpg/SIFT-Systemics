@@ -159,9 +159,9 @@ export default function SiftSystemicsLandingPage() {
             </p>
 
             <h2 className="mt-4 text-4xl font-black uppercase leading-tight tracking-[-0.05em] md:text-6xl">
-              Severity is the outcome.
+              Prevention is in the data.
               <br />
-              Physics is the warning.
+              So stop counting incidents.
             </h2>
           </div>
 
