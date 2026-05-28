@@ -19,12 +19,12 @@ const stats = [
   {
     value: "7 in 10",
     label:
-      "cases exhibited identifiable and repeatable energy pathway patterns that can be learned"
+      "cases exhibited identifiable and repeatable energy pathway patterns"
   },
   {
-    value: "55+",
+    value: "200K+",
     label:
-      "renewables and infrastructure cases reviewed for hidden high-consequence pathways"
+      "incident cases studied across multiple industries and sectors"
   },
   {
     value: "83%",
