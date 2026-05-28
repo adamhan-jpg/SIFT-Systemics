@@ -95,9 +95,9 @@ export default function SiftSystemicsLandingPage() {
 
             <p className="mt-7 max-w-2xl text-xl font-semibold leading-9 text-black/75">
               Sift Systemics helps safety leaders find
-              fatal-risk pathways hidden inside ordinary
+              fatal-risk pathways buried inside ordinary
               low-severity incidents, near misses, and
-              routine observations.
+              routine observations already being collected.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
