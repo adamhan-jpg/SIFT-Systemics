@@ -288,8 +288,7 @@ export default function SiftSystemicsLandingPage() {
               </label>
 
               <label className="grid gap-2 text-sm font-black uppercase tracking-wide">
-                What data or risk question would you like
-                to explore?
+                How can SIFT happen in your organization?
 
                 <textarea
                   className="min-h-32 border-2 border-black px-4 py-3 text-base font-medium normal-case"
