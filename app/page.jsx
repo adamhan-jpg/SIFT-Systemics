@@ -17,9 +17,9 @@ function SiftLogo({ size = 72 }) {
 
 const stats = [
   {
-    value: "20%",
+    value: "7 in 10",
     label:
-      "of reviewed peer contractor incidents showed fatal-physics signals despite non-fatal outcomes"
+      "cases exhibited identifiable and repeatable energy pathway patterns that can be learned"
   },
   {
     value: "55+",
@@ -27,9 +27,9 @@ const stats = [
       "renewables and infrastructure cases reviewed for hidden high-consequence pathways"
   },
   {
-    value: "0–5",
+    value: "83%",
     label:
-      "Fatality Proximity Index scoring to rank consequence potential, not just outcome severity"
+      "of severe events had survivable outcomes — yet extreme fatal physics"
   }
 ];
 
