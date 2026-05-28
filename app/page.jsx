@@ -116,6 +116,17 @@ export default function SiftSystemicsLandingPage() {
               >
                 Discuss a pilot <Mail className="h-5 w-5" />
               </a>
+
+                <a
+                  href="/industry-report.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-3 border-2 border-black px-7 py-4 text-sm font-black uppercase tracking-wide"
+                >
+                  View Industry Report
+                </a>
+              </div>
+              
             </div>
           </div>
 
