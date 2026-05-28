@@ -24,7 +24,7 @@ const stats = [
   {
     value: "7 in 10",
     label:
-      "cases exhibited identifiable and repeatable energy pathway patterns"
+      "cases exhibited identifiable and repeatable fatal energy pathway patterns"
   },
   {
     value: "200K+",
