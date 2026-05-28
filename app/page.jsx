@@ -17,8 +17,8 @@ function SiftLogo({ size = 72 }) {
 
 const stats = [
   {
-    value: "7/10",
-    label: "showed fatal cases exhibited high-proximity patterns and are not random"
+    value: "7 in 10",
+    label: "fatal cases exhibited high-proximity patterns showing incidents are not random"
   },
   {
     value: "100K+",
@@ -26,7 +26,7 @@ const stats = [
   },
   {
     value: "83%",
-    label: "of Severe Events Had Survivable Outcomes - Yet Extreme Fatal Physics"
+    label: "of severe events had survivable outcomes - yet extreme Fatal Physics"
   }
 ];
 
