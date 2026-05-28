@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 import React, { useState } from "react";
 import { ArrowRight, Check, Mail, ShieldCheck } from "lucide-react";
@@ -17,16 +17,19 @@ function SiftLogo({ size = 72 }) {
 
 const stats = [
   {
-    value: "7 in 10",
-    label: "fatal cases exhibited high-proximity patterns showing incidents are not random"
+    value: "20%",
+    label:
+      "of reviewed peer contractor incidents showed fatal-physics signals despite non-fatal outcomes"
   },
   {
-    value: "100K+",
-    label: "severe incident cases reviewed for hidden high-consequence pathways"
+    value: "55+",
+    label:
+      "renewables and infrastructure cases reviewed for hidden high-consequence pathways"
   },
   {
-    value: "83%",
-    label: "of severe events had survivable outcomes - yet extreme Fatal Physics"
+    value: "0–5",
+    label:
+      "Fatality Proximity Index scoring to rank consequence potential, not just outcome severity"
   }
 ];
 
@@ -53,15 +56,6 @@ export default function SiftSystemicsLandingPage() {
       ...currentData,
       [name]: value
     }));
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-
-    const subject = "SIFT Systemics Pilot Interest";
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nArea of interest: ${formData.interest}\n\nMessage:\n${formData.message}`;
-
-    window.location.href = `mailto:ahan@aeesconsulting.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 
   return (
@@ -93,7 +87,9 @@ export default function SiftSystemicsLandingPage() {
             </h1>
 
             <p className="mt-7 max-w-2xl text-xl font-semibold leading-9 text-black/75">
-              Sift Systemics helps safety leaders find fatal-risk pathways hidden inside ordinary low-severity incidents, near misses, and routine observations.
+              Sift Systemics helps safety leaders find fatal-risk pathways hidden
+              inside ordinary low-severity incidents, near misses, and routine
+              observations.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -121,10 +117,14 @@ export default function SiftSystemicsLandingPage() {
         <section className="border-y border-black bg-black px-6 py-12 text-white md:px-8">
           <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
             {stats.map((stat) => (
-              <div key={stat.value} className="border-white/25 md:border-r md:pr-8 last:border-r-0">
+              <div
+                key={stat.value}
+                className="border-white/25 md:border-r md:pr-8 last:border-r-0"
+              >
                 <div className="text-6xl font-black tracking-[-0.07em] md:text-7xl">
                   {stat.value}
                 </div>
+
                 <p className="mt-4 max-w-sm text-base font-semibold leading-7 text-white/75">
                   {stat.label}
                 </p>
@@ -146,38 +146,49 @@ export default function SiftSystemicsLandingPage() {
 
           <div className="space-y-5">
             {bullets.map((item) => (
-              <div key={item} className="flex gap-4 border-b border-black/15 pb-5">
+              <div
+                key={item}
+                className="flex gap-4 border-b border-black/15 pb-5"
+              >
                 <Check className="mt-1 h-6 w-6 shrink-0 stroke-[3]" />
+
                 <p className="text-lg font-bold leading-8">{item}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <section id="pilot" className="bg-black px-6 py-16 text-white md:px-8 md:py-24">
+        <section
+          id="pilot"
+          className="bg-black px-6 py-16 text-white md:px-8 md:py-24"
+        >
           <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.9fr_1.1fr]">
             <div>
               <div className="mb-6 inline-flex items-center gap-3 border border-white/30 px-4 py-3 text-sm font-black uppercase tracking-[0.2em] text-white/70">
-                <ShieldCheck className="h-5 w-5" /> Pilot interest
+                <ShieldCheck className="h-5 w-5" />
+                Pilot interest
               </div>
 
               <h2 className="text-4xl font-black uppercase leading-tight tracking-[-0.05em] md:text-6xl">
-                Interested in finding what your incident data is already telling you?
+                Interested in finding what your incident data is already telling
+                you?
               </h2>
 
               <p className="mt-6 max-w-xl text-lg font-medium leading-8 text-white/75">
-                Share a few details and Sift Systemics can discuss a limited pilot using anonymized incident, near-miss, or observation data.
+                Share a few details and Sift Systemics can discuss a limited
+                pilot using anonymized incident, near-miss, or observation data.
               </p>
             </div>
 
             <form
-              name="pilot-interest"
-              onSubmit={handleSubmit}
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
               className="grid gap-4 bg-white p-6 text-black md:p-8"
             >
               <div className="grid gap-4 md:grid-cols-2">
                 <label className="grid gap-2 text-sm font-black uppercase tracking-wide">
                   Name
+
                   <input
                     className="border-2 border-black px-4 py-3 text-base font-medium normal-case"
                     name="name"
@@ -190,6 +201,7 @@ export default function SiftSystemicsLandingPage() {
 
                 <label className="grid gap-2 text-sm font-black uppercase tracking-wide">
                   Email
+
                   <input
                     className="border-2 border-black px-4 py-3 text-base font-medium normal-case"
                     name="email"
@@ -203,6 +215,7 @@ export default function SiftSystemicsLandingPage() {
 
               <label className="grid gap-2 text-sm font-black uppercase tracking-wide">
                 Company
+
                 <input
                   className="border-2 border-black px-4 py-3 text-base font-medium normal-case"
                   name="company"
@@ -214,6 +227,7 @@ export default function SiftSystemicsLandingPage() {
 
               <label className="grid gap-2 text-sm font-black uppercase tracking-wide">
                 Area of interest
+
                 <select
                   className="border-2 border-black px-4 py-3 text-base font-medium normal-case"
                   name="interest"
@@ -230,6 +244,7 @@ export default function SiftSystemicsLandingPage() {
 
               <label className="grid gap-2 text-sm font-black uppercase tracking-wide">
                 What data or risk question would you like to explore?
+
                 <textarea
                   className="min-h-32 border-2 border-black px-4 py-3 text-base font-medium normal-case"
                   name="message"
@@ -246,7 +261,8 @@ export default function SiftSystemicsLandingPage() {
               </button>
 
               <p className="text-sm font-medium leading-6 text-black/55">
-                Submitting opens the visitor’s email app with the completed information addressed to ahan@aeesconsulting.com.
+                Form submissions are securely sent through Formspree directly to
+                SIFT Systemics.
               </p>
             </form>
           </div>
