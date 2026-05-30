@@ -86,7 +86,7 @@ export default function SiftSystemicsLandingPage() {
             </p>
 
             <h1 className="max-w-4xl text-6xl font-black uppercase leading-[0.92] tracking-[-0.06em] md:text-8xl">
-                Serious about Safety?
+                Safety Serious?
               <br />
               <span className="text-black/60">
                 Sift your Data.
