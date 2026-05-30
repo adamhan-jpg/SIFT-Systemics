@@ -41,7 +41,7 @@ const stats = [
 const bullets = [
   "Find high-consequence patterns buried in anonymized low-severity incident data",
   "Prioritize safety reviews by fatal-risk proximity, not just frequency",
-  "Create an owner-ready evidence trail for contractor and operational risk governance",
+  "Create an owner-ready action plan for contractors and operational risk governance",
   "Start with a limited, anonymized dataset before any larger engagement"
 ];
 
