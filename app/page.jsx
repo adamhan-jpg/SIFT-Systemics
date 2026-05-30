@@ -74,7 +74,7 @@ export default function SiftSystemicsLandingPage() {
           href="#pilot"
           className="bg-black px-5 py-3 text-xs font-black uppercase tracking-wide text-white md:px-7 md:py-4"
         >
-          Got Data?
+          Sift Happens
         </a>
       </header>
 
@@ -86,10 +86,10 @@ export default function SiftSystemicsLandingPage() {
             </p>
 
             <h1 className="max-w-4xl text-6xl font-black uppercase leading-[0.92] tracking-[-0.06em] md:text-8xl">
-                Fatal Physics?
+                Serious about Safety?
               <br />
               <span className="text-black/60">
-                Sift Happens.
+                Sift your Data.
               </span>
             </h1>
 
