@@ -74,7 +74,7 @@ export default function SiftSystemicsLandingPage() {
           href="#pilot"
           className="bg-black px-5 py-3 text-xs font-black uppercase tracking-wide text-white md:px-7 md:py-4"
         >
-          SIFT HAPPENS
+          Got Data?
         </a>
       </header>
 
@@ -82,14 +82,14 @@ export default function SiftSystemicsLandingPage() {
         <section className="mx-auto grid max-w-7xl items-center gap-12 px-6 pb-16 pt-6 md:grid-cols-[1fr_0.9fr] md:px-8 md:pb-24">
           <div>
             <p className="mb-5 text-sm font-black uppercase tracking-[0.28em] text-black/50">
-              Fatal physics intelligence in your incident data
+              Incident Data as Risk Intelligence
             </p>
 
             <h1 className="max-w-4xl text-6xl font-black uppercase leading-[0.92] tracking-[-0.06em] md:text-8xl">
-              Hidden signatures.
+                Fatal Physics.
               <br />
               <span className="text-black/60">
-                Safer systems.
+                Sift Happens.
               </span>
             </h1>
 
